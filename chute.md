@@ -26,7 +26,7 @@ Vous devrez également **interpoler les données mesurées** pour pouvoir estime
 
 5. On ajoute une **force de frottement** proportionnelle à la vitesse :
 
-    $F_frottement = -k * v$
+    $F_{frottement} = -k * v$
 
    avec $k$ une constante de frottement à définir (ex : 0.1)
 
