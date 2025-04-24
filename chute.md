@@ -38,10 +38,14 @@ Vous devrez également **interpoler les données mesurées** pour pouvoir estime
 - Créer un graphe avec matplotlib pour afficher le temps de chute en fonction de la hauteur
 
 ## Partie 2 : Données expérimentales
-- Un fichier `donnees_chute.csv` vous est fourni avec deux colonnes : hauteur (en m), temps mesuré (en s)
+- Un fichier `chute.csv` vous est fourni avec deux colonnes : hauteur (en m), temps mesuré (en s)
 - Charger les données dans une liste de tuples (hauteur, temps)
 - Afficher les données sur un graphe
 - Comparer la forme de la courbe avec celle obtenue par simulation
+
+### Valeurs physiques
+- Masse de la balle : 25 g
+- Accélération de la gravité : 9.81 m/s²
 
 ## Partie 3 : Calcul du temps de chute
 - Écrire une fonction `temps_de_chute(h, v0)` qui retourne le temps de chute pour une hauteur donnée et une vitesse initiale.
