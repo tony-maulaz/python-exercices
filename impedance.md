@@ -28,7 +28,30 @@ Les mesures de tension et de courant n’ont **pas été prises aux mêmes insta
 - Utiliser `numpy` et `matplotlib`.
 - Vérifier que le courant n’est pas nul avant de diviser.
 
-## Bonus
-- Ajouter une couleur différente pour chaque courbe.
-- Ajouter un titre, des labels, et une légende.
-- Sauvegarder les figures en image.
+## Code d'aide
+```python
+fig, ax1 = plt.subplots(figsize=(10, 5))
+
+# Axe Y principal : sin(t)
+ax1.plot(t, sin_t, label="sin(t)", color="blue")
+ax1.set_ylabel("sin(t)", color="blue")
+ax1.tick_params(axis='y', labelcolor="blue")
+ax1.set_xlabel("Temps (rad)")
+
+ax2 = ax1.twinx()
+ax2.plot(t, cos_t, label="cos(t)", color="red")
+ax2.set_ylabel("cos(t)", color="red")
+ax2.tick_params(axis='y', labelcolor="red")
+
+plt.title("sin(t) et cos(t) sur deux axes Y")
+
+plt.tight_layout()
+```
+
+```python
+xp = np.array([0, 1, 2, 3])
+fp = np.array([0, 1, 0, -1])
+
+x_interp = np.linspace(0, 3, 100)
+y_interp = np.interp(x_interp, xp, fp)
+```
